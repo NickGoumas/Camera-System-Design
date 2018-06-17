@@ -1,0 +1,95 @@
+
+<html>
+<head>
+  <script type="text/javascript" src="calcs.js"></script>
+</head>
+<body>
+
+  <h3>Underwater Camera System Design</h3>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+  <div>
+
+    <h4>Camera Parameters</h4>
+    <p>
+      <span>Sensor Hor Resolution:</span>
+      <input type="text" id="hor_res" placeholder="in pixels">
+    </p>
+    <p>
+      <span>Sensor Ver Resolution:</span>
+      <input type="text" id="ver_res" placeholder="in pixels">
+    </p>
+    <p>
+      <span>Pixel Size (um)</span>
+      <select id="pix_size" >
+        <option value=3.45>3.45</option>
+        <option value="999">999</option>
+      </select>
+    </p>
+    <table>
+      <tr>
+        <td>Horizontal Sensor Size in mm:</td>
+        <td id="hor_size"></td>
+      </tr>
+      <tr>
+        <td>Vertical Sensor Size in mm:</td>
+        <td id="ver_size"></td>
+      </tr>
+    </table>
+
+
+    <h4>Lens Parameters</h4>
+    <p>
+      <span>Focal Length:</span>
+      <input type="text" id="focal_length" placeholder="in millimeters...">
+    </p>
+    <p>
+      <span>Horizontal Baseline:</span>
+      <input type="text" id="baseline" placeholder="in millimeters...">
+    </p>
+    <table>
+      <tr>
+        <td>Horizontal FOV:</td>
+        <td id="hor_FOV"></td>
+      </tr>
+      <tr>
+        <td>Vertical FOV:</td>
+        <td id="ver_FOV"></td>
+      </tr>
+    </table>
+
+
+    <h4>Scene Parameters</h4>
+    <p>
+      <span>Focal Distance:</span>
+      <input type="text" id="focal_dist" placeholder="in meters...">
+    </p>
+
+    <table>
+     <tr>
+      <td>Horizontal Image Size in m:</td>
+      <td id="hor_img_size"></td>
+    </tr>
+    <tr>
+      <td>Vertical Image Size in m:</td>
+      <td id="ver_img_size"></td>
+    </tr>
+    <tr>
+      <td>Approx. Projected Pixel Size in mm:</td>
+      <td id="proj_pix"></td>
+    </tr>
+    <tr>
+      <td>L-R Image Overlap Percentage:</td>
+      <td id="img_overlap"></td>
+    </tr>
+  </table>
+
+  <input type="submit" value="Calculate" onclick="runCalcs()">
+</div>
+
+
+
+
+
+</body>
+</html>

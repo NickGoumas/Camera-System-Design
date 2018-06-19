@@ -50,6 +50,7 @@ function fieldOfView(focal_length, sensor_size) {
     let opp_side = sensor_size / 2;
     let adj_side = focal_length
     let deg = Math.atan(opp_side/adj_side);
+    deg = deg * 2;
     deg = deg * 180 / Math.PI;
     deg = deg * 100;
     deg = Math.round(deg) / 100;
@@ -65,5 +66,3 @@ function sensorSize(pixels, pixel_size) {
         //document.getElementById("demo").innerHTML = size;
     }
 
-
-//need to refactor to remove all document references from javascript functions. Get then in first function.
